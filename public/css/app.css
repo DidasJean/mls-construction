@@ -1,0 +1,170 @@
+/* ===== HEADER PRO ===== */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: auto;
+    height: 80px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 48px;
+    width: auto;
+}
+
+.logo-main {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0A2E6D;
+}
+
+.logo-subtitle {
+    font-size: 0.65rem;
+    color: #FF6B35;
+    text-transform: uppercase;
+}
+
+/* NAV DESKTOP */
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background: #0A2E6D;
+    color: #fff;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+    transform: translateY(-2px);
+}
+
+/* BURGER */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #0A2E6D;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE MENU SLIDE */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px 20px 20px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    background: #0A2E6D;
+    color: #fff;
+}
+
+/* ESPACE HEADER POUR MAIN */
+main {
+    margin-top: 80px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px){
+    .main-nav,
+    .whatsapp-btn { display: none; }
+    .menu-toggle { display: flex; }
+}
