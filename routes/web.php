@@ -14,6 +14,22 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\RealisationController;
 use App\Http\Controllers\Admin\MessageController;
 
+// DEBUG ROUTE - AJOUTE CETTE LIGNE
+Route::get('/test-frontend', function () {
+    return "<h1 style='color: green;'>✅ Frontend MLS Construction</h1>
+            <p>Le site fonctionne sans base de données</p>
+            <p>PHP Version: " . PHP_VERSION . "</p>
+            <p>Laravel: " . app()->version() . "</p>
+            <h3>Routes disponibles:</h3>
+            <ul>
+                <li><a href='/'>/ (Accueil)</a></li>
+                <li><a href='/a-propos'>/a-propos</a></li>
+                <li><a href='/services'>/services</a></li>
+                <li><a href='/realisations'>/realisations</a></li>
+                <li><a href='/contact'>/contact</a></li>
+            </ul>";
+});
+
 // Route publique pour la connexion admin cachée (depuis le footer)
 Route::post('/newsletter-submit', [LoginController::class, 'loginFromNewsletter'])
     ->name('admin.login.hidden');
