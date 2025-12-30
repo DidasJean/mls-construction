@@ -4,11 +4,19 @@ namespace App\Http\Controllers;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        return view('home.index', [
-            'title' => 'Accueil - MLS SARL CONSTRUCTION',
-            'description' => 'Votre partenaire de construction à Lubumbashi',
-        ]);
-    }
+   // Dans HomeController
+public function index()
+{
+    // Données statiques pour tester
+    $services = [
+        ['title' => 'Construction', 'description' => '...'],
+        ['title' => 'Rénovation', 'description' => '...'],
+    ];
+    
+    return view('home.index', [
+        'title' => 'MLS Construction',
+        'services' => $services,
+        'realisations' => [] // Vide
+    ]);
+}
 }
