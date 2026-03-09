@@ -137,7 +137,7 @@
             </div>
         @endif
         
-        <form method="POST" action="{{ route('admin.login.submit') }}">
+        <form method="POST" action="{{ route('admin.login') }}">
             @csrf
             
             <div class="form-group">

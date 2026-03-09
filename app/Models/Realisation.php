@@ -16,7 +16,9 @@ class Realisation extends Model
         'description',
         'featured',
         'category',
-        'completion_date'
+        'completion_date',
+        'surface',
+        'duree'
     ];
 
     protected $attributes = [
